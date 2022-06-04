@@ -1,0 +1,17 @@
+{
+  "home": {
+    "listen": "Écoutez de la bonne musique!!"
+  },
+  "listen": "Écoutez de la bonne musique",
+  "manage": {
+    "my_songs": "Mes Chansons"
+  },
+  "message": "bonjour i18n !!",
+  "register": {
+    "TOS": "",
+    "accept": ""
+  },
+  "song": {
+    "comment_count": ""
+  }
+}

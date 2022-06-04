@@ -1,0 +1,17 @@
+{
+  "home": {
+    "listen": "उत्तम संगीत ऐका"
+  },
+  "listen": "उत्तम संगीत ऐका!!",
+  "manage": {
+    "my_songs": ""
+  },
+  "message": "हॅलो i18n !!",
+  "register": {
+    "TOS": "",
+    "accept": ""
+  },
+  "song": {
+    "comment_count": ""
+  }
+}

@@ -33,6 +33,13 @@
             </li>
           </template>
         </ul>
+        <ul class="flex flex-row mt-1 ml-auto">
+          <li>
+            <a class="px-2 text-white" href="#" @click.prevent="changeLocale">
+              {{ currentLocale }}
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
   </header>
@@ -45,7 +52,10 @@ export default {
   name: 'Header',
   computed: {
     ...mapState(['userLoggedIn']),
-  // eslint-disable-next-line object-curly-newline
+    // eslint-disable-next-line object-curly-newline
+    currentLocale() {
+      return this.$i18n.locale === 'fr' ? 'French' : 'English';
+    },
   },
   methods: {
     ...mapMutations(['toggleAuthModal']),
@@ -54,6 +64,9 @@ export default {
       if (this.$route.meta.requiresAuth) {
         this.$router.push({ name: 'home' });
       }
+    },
+    changeLocale() {
+      this.$i18n.locale = this.$i18n.locale === 'fr' ? 'en' : 'fr';
     },
     /*     signout() {
       this.$store.dispatch('signout', {
