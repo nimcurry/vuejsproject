@@ -49,7 +49,7 @@
 import { mapMutations, mapState /* ,  mapActions */ } from 'vuex';
 
 export default {
-  name: 'Header',
+  name: 'AppHeader',
   computed: {
     ...mapState(['userLoggedIn']),
     // eslint-disable-next-line object-curly-newline

@@ -1,4 +1,3 @@
-/* eslint-disable object-curly-newline */
 <template>
         <!-- Registration Form -->
     <div class="text-white text-center font-bold p-5 mb-4"

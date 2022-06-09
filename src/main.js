@@ -9,6 +9,7 @@ import './assets/main.css';
 import Icon from './directives/icon';
 import i18n from './includes/i18n';
 import './registerServiceWorker';
+import GlobalComponents from './includes/_globals';
 
 let app;
 auth.onAuthStateChanged(() => {
@@ -18,6 +19,7 @@ auth.onAuthStateChanged(() => {
     app.use(store);
     app.use(router);
     app.use(Veevalidation);
+    app.use(GlobalComponents);
     app.directive('icon', Icon);
     app.mount('#app');
   }

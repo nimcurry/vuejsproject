@@ -146,9 +146,7 @@ export default {
       resetForm();
     },
     async getComments() {
-      const snapshots = await commentsCollection.where(
-        'sid', '==', this.$route.params.id,
-      ).get();
+      const snapshots = await commentsCollection.where('sid', '==', this.$route.params.id).get();
 
       this.comments = [];
 
