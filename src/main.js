@@ -10,6 +10,10 @@ import Icon from './directives/icon';
 import i18n from './includes/i18n';
 import './registerServiceWorker';
 import GlobalComponents from './includes/_globals';
+import ProgressBar from './includes/progress-bar';
+import 'nprogress/nprogress.css';
+
+ProgressBar(router);
 
 let app;
 auth.onAuthStateChanged(() => {

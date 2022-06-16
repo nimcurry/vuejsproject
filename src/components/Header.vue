@@ -51,7 +51,8 @@ import { mapMutations, mapState /* ,  mapActions */ } from 'vuex';
 export default {
   name: 'AppHeader',
   computed: {
-    ...mapState(['userLoggedIn']),
+    ...mapState({ userLoggedIn: (state) => state.auth.userLoggedIn }),
+    // ...mapState(['userLoggedIn']),
     // eslint-disable-next-line object-curly-newline
     currentLocale() {
       return this.$i18n.locale === 'fr' ? 'French' : 'English';

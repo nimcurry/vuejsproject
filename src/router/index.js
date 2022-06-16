@@ -1,10 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router';
 // import Home from '../views/Home.vue';
-import Manage from '@/views/Manage.vue';
-import Home from '@/views/Home.vue';
-import About from '@/views/About.vue';
+// import Manage from '@/views/Manage.vue';
+// import Home from '@/views/Home.vue';
+// import About from '@/views/About.vue';
 import store from '@/store';
-import Song from '@/views/Song.vue';
+// import Song from '@/views/Song.vue';
+
+const Home = () => import('@/views/Home.vue');
+const Manage = () => import('@/views/Manage.vue');
+const About = () => import(/* webpackChunkName: "groupedChunk" */'@/views/About.vue');
+const Song = () => import(/* webpackChunkName: "groupedChunk" */'@/views/Song.vue');
 
 const routes = [
   {
@@ -24,8 +29,8 @@ const routes = [
     meta: { requiresAuth: true },
     component: Manage,
     beforeEnter: (to, from, next) => {
-      console.log(to, from);
-      console.log('Manage Route Guard');
+      // console.log(to, from);
+      // console.log('Manage Route Guard');
       next();
     },
   },
@@ -72,7 +77,7 @@ router.beforeEach((to, from, next) => {
     next();
     return;
   }
-  if (store.state.userLoggedIn) {
+  if (store.state.auth.userLoggedIn) {
     next();
   } else {
     next({ name: 'home' });

@@ -95,11 +95,11 @@ export default {
         task.on('state_changed', (snapshot) => {
           const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
           this.uploads[uploadIndex].current_progress = progress;
-        }, (error) => {
+        }, () => {
           this.uploads[uploadIndex].variant = 'bg-red-400';
           this.uploads[uploadIndex].icon = 'fas fa-times';
           this.uploads[uploadIndex].text_class = 'text-red-400';
-          console.log(error);
+          //  console.log(error);
         }, async () => {
           const song = {
             uid: auth.currentUser.uid,
@@ -122,7 +122,7 @@ export default {
           this.uploads[uploadIndex].text_class = 'text-green-400';
         });
       });
-      console.log(files);
+      // console.log(files);
     },
   },
   cancelUploads() {
