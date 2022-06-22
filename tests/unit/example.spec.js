@@ -1,4 +1,4 @@
-/* alternative to test is it() function */
+// it()
 test('sanity test', () => {
   expect(true).toBe(true);
 });
