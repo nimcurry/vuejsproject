@@ -1,4 +1,4 @@
-import { cyan } from "@tailwindcss/postcss7-compat/colors";
+import { cy } from "@tailwindcss/postcss7-compat/colors";
 
 describe('Audio Player', () => {
   it('plays audio', () => {
